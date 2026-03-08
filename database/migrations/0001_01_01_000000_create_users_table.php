@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            // SaaS roles: admin manages platform, manager manages tenant account.
+            $table->string('role')->default('admin');
+            $table->unsignedBigInteger('cliente_empresa_id')->nullable()->index();
             $table->rememberToken();
             $table->timestamps();
         });
