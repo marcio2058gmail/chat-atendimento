@@ -15,6 +15,30 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    
+                    <!-- Admin Module -->
+                    <x-nav-link :href="route('admin.clientes.index')" :active="request()->routeIs('admin.clientes.*')">
+                        {{ __('Clientes') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('admin.planos.index')" :active="request()->routeIs('admin.planos.*')">
+                        {{ __('Planos') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('admin.assinaturas.index')" :active="request()->routeIs('admin.assinaturas.*')">
+                        {{ __('Assinaturas') }}
+                    </x-nav-link>
+                    
+                    <!-- Financeiro Module -->
+                    <x-nav-link :href="route('financeiro.faturas.index')" :active="request()->routeIs('financeiro.faturas.*')">
+                        {{ __('Faturas') }}
+                    </x-nav-link>
+                    
+                    <!-- Atendimento Module -->
+                    <x-nav-link :href="route('atendimento.atendentes.index')" :active="request()->routeIs('atendimento.atendentes.*')">
+                        {{ __('Atendentes') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('atendimento.chamados.index')" :active="request()->routeIs('atendimento.chamados.*')">
+                        {{ __('Chamados') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -69,6 +93,30 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            
+            <!-- Admin Module -->
+            <x-responsive-nav-link :href="route('admin.clientes.index')" :active="request()->routeIs('admin.clientes.*')">
+                {{ __('Clientes') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('admin.planos.index')" :active="request()->routeIs('admin.planos.*')">
+                {{ __('Planos') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('admin.assinaturas.index')" :active="request()->routeIs('admin.assinaturas.*')">
+                {{ __('Assinaturas') }}
+            </x-responsive-nav-link>
+            
+            <!-- Financeiro Module -->
+            <x-responsive-nav-link :href="route('financeiro.faturas.index')" :active="request()->routeIs('financeiro.faturas.*')">
+                {{ __('Faturas') }}
+            </x-responsive-nav-link>
+            
+            <!-- Atendimento Module -->
+            <x-responsive-nav-link :href="route('atendimento.atendentes.index')" :active="request()->routeIs('atendimento.atendentes.*')">
+                {{ __('Atendentes') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('atendimento.chamados.index')" :active="request()->routeIs('atendimento.chamados.*')">
+                {{ __('Chamados') }}
             </x-responsive-nav-link>
         </div>
 
